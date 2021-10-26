@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ModularApp(module: AppModule(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,10 +15,22 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.teal,
       ),
       home: const HomePage(),
-    );
+    ).modular();
   }
+
 }
 
+class AppModule extends Module {
+
+  @override
+  List<Bind<Object>> get binds => [];
+
+  @override
+  List<ModularRoute> get routes => [
+    ChildRoute('/', child: (context, args) => HomePage()),
+  ];
+
+}
 
 class HomePage extends StatelessWidget {
 
@@ -31,4 +45,5 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
+
 }
