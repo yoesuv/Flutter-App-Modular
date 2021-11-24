@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yoesuv.flutter_app_modular">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
         android:label="flutter_app_modular"
         android:icon="@mipmap/ic_launcher">
