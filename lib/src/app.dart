@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_modular/src/feature/home/screens/home_screen.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,7 +12,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const HomeScreen(),
     ).modular();
   }
 
