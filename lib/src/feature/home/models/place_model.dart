@@ -28,4 +28,9 @@ class PlaceModel {
     "thumbnail": thumbnail,
     "gambar": gambar,
   };
+
+  static List<PlaceModel> buildListFromJson(List<dynamic> json) {
+    return json.map((dynamic x) => PlaceModel.fromJson(x)).toList();
+  }
+
 }

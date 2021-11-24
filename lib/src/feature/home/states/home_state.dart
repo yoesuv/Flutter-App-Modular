@@ -18,3 +18,8 @@ class HomeStateSuccess extends HomeState {
   @override
   List<Object> get props => [listPlace];
 }
+
+class HomeStateFailed extends HomeState {
+  @override
+  List<Object> get props => [];
+}
