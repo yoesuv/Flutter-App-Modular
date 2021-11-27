@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_modular/src/feature/home/models/place_model.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class ItemPlace extends StatelessWidget {
 
@@ -11,7 +12,9 @@ class ItemPlace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Modular.to.pushNamed('/detail', arguments: placeModel);
+      },
       child: Stack(
         children: [
           SizedBox(
